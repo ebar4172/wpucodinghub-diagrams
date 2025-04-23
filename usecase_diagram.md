@@ -1,8 +1,7 @@
 ```mermaid
-%%{init: {'themeVariables': {'actorBorder': 'black', 'actorBkg': 'white', 'actorTextColor': 'black'}}}%%
 usecaseDiagram
-    actor User as "👩💻 User (Student/Faculty)"
-    actor Admin as "👨💼 Admin"
+    actor User as "User (Student/Faculty)"
+    actor Admin as "Admin"
     
     (Login) as UC1
     (Submit Code) as UC2
@@ -28,11 +27,4 @@ usecaseDiagram
     Admin --> UC8
     Admin --> UC9
     Admin --> UC10
-    
-    UC2 .> (Handle Compile Errors) : extends
-    UC4 .> (Report Post) : extends
-    UC1 <.. (Two-Factor Auth) : includes
-    
-    note for UC2 "Validates code against test cases\nand checks for plagiarism"
-    note for UC8 "Sets time/memory constraints\nand difficulty levels"
 ```
